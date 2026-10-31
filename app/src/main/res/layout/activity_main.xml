@@ -9,43 +9,34 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="410dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="1dp"
-        android:background="#F10F7EE6"
-        android:paddingStart="50px"
-        android:paddingTop="20px"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bg"
+        android:padding="16dp"
         android:text="@string/title_scrolling_text"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="345dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="112dp"
-        android:background="#0896EF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/subtitle_header_bg"
+        android:padding="16dp"
         android:text="@string/subtitle_beatles_anthology"
-        android:textColor="#000000"
-        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonComment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/submit_comment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonComment"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,8 +55,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/subtitle_rarities"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -75,9 +66,21 @@
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
                 android:text="@string/article_content"
-                android:textColor="#333333"
-                android:textSize="16sp" />
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="15sp"
+                android:lineSpacingExtra="4dp" />
 
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/buttonComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/submit_comment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button buttonComment = findViewById(R.id.buttonComment);
         if (buttonComment != null) {
-            buttonComment.setOnClickListener(v -> Toast.makeText(MainActivity.this, "Comment submitted!", Toast.LENGTH_SHORT).show());
+            buttonComment.setOnClickListener(v -> Toast.makeText(MainActivity.this, getString(R.string.toast_comment_submitted), Toast.LENGTH_SHORT).show());
         }
     }
 }
