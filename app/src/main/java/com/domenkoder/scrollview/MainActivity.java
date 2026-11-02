@@ -2,6 +2,7 @@ package com.domenkoder.scrollview;
 
 import android.os.Bundle;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         TextView textView6 = findViewById(R.id.textView6);
         if (textView6 != null) {
             textView6.setText(Html.fromHtml(getString(R.string.article_content), Html.FROM_HTML_MODE_LEGACY));
+            textView6.setMovementMethod(LinkMovementMethod.getInstance());
         }
 
         Button buttonComment = findViewById(R.id.buttonComment);
